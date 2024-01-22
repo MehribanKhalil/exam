@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+    --main-color:RGB(255, 182, 6);
+}
+
+
+h1{
+    font-size: clamp(2.5rem, 0rem + 8vw, 4.5rem);
+}
+
+
+
+::selection{
+    background: var(--main-color);
+    color: white;
+}
+
+.section{
+    @apply px-5 md:px-16 lg:px-24  xl:px-64
+}
+
+.page{
+    @apply  min-h-[100vh]
+}
+
+.btn{
+    @apply  border border-main-color px-4 py-2 
+
+}
