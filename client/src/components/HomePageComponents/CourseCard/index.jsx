@@ -13,11 +13,10 @@ const CourseCard = ({
   positon,
   price,
   product,
-  _id
+  _id,
 }) => {
-
-  const {wishlist,handleWishlist}=useContext(WishlistContext)
-  const {addToBasket}=useContext(BasketContext)
+  const { wishlist, handleWishlist } = useContext(WishlistContext);
+  const { addToBasket } = useContext(BasketContext);
 
   return (
     <div className=" course-card text-center">
@@ -27,27 +26,31 @@ const CourseCard = ({
 
       <div className=" bg-[#F8F9FB]">
         <div className=" py-10">
-        <Link to={`/${_id}`}>
-       <h3 className=" cursor-pointer text-2xl  font-medium hover:text-gray-500">
-          {title}
-        </h3>
-       </Link>
+          <Link to={`/Course/${_id}`}>
+            <h3 className=" cursor-pointer text-2xl  font-medium hover:text-gray-500">
+              {title}
+            </h3>
+          </Link>
           <p className=" text-gray-400 font-semibold">{info}</p>
         </div>
 
         <div className=" space-x-3 flex items-center justify-center text-main-color">
-          <button onClick={()=>handleWishlist(product)} className=" text-2xl pb-3">
-            {
-          wishlist.some(x=>x._id === product._id) ?  <i class="fa-solid fa-heart"></i> : <i class="fa-regular fa-heart"></i>
-            }
-            
-            
+          <button
+            onClick={() => handleWishlist(product)}
+            className=" text-2xl pb-3"
+          >
+            {wishlist.some((x) => x._id === product._id) ? (
+              <i class="fa-solid fa-heart"></i>
+            ) : (
+              <i class="fa-regular fa-heart"></i>
+            )}
           </button>
 
-          <button onClick={()=>addToBasket(product)} className=" text-2xl pb-3">
-          <i class="fa-solid fa-cart-shopping"></i>
-            
-            
+          <button
+            onClick={() => addToBasket(product)}
+            className=" text-2xl pb-3"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
           </button>
         </div>
 

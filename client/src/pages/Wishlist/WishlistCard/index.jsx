@@ -26,7 +26,7 @@ const WishlistCard = ({
 
     <div className=" bg-[#F8F9FB]">
       <div className=" py-10">
-       <Link to={` /${_id}`}>
+       <Link to={`/Course/${_id}`}>
        <h3 className=" cursor-pointer text-2xl  font-medium hover:text-gray-500">
           {title}
         </h3>

@@ -21,7 +21,7 @@ function App() {
             <Route path="/admin"  element={<Admin/>} />
             <Route path="/wishlist"  element={<Wishlist/>} />
             <Route path="/basket"  element={<Basket/>} />
-            <Route path="/:id"  element={<Detail/>} />
+            <Route path="/Course/:id"  element={<Detail/>} />
           </Route>
         </Routes>
       </BrowserRouter>
